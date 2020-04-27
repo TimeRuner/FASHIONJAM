@@ -1,0 +1,23 @@
+.subButton
+    font-size: 11px
+    font-weight: 500
+    text-transform: uppercase
+    color:#ffffff
+    text-align: center
+    display: block
+    letter-spacing: 2px
+    &:after
+        content: ''
+        margin-top: 4px
+        height: 1.5px
+        width: 0
+        display: block
+        margin: 0 auto
+        background-color:#ffffff
+        display: block
+        transition: 0.5s all
+    &:hover
+        text-decoration: none
+        color:#ffffff
+        &:after
+            width: 150px

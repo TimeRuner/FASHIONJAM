@@ -1,0 +1,63 @@
+.welcome
+    min-height: 738px
+    &__main
+        padding: 144px 30px 18px 30px
+        position: relative
+        height: 660px
+        background: url("../img/first/firstSlide.png") center center/cover no-repeat
+    &__header
+        color:#ffffff
+        font-size: 60px
+        font-weight: 700
+        line-height: 55px
+        text-transform: uppercase
+        text-align: center
+        margin-bottom: 44px
+        line-height: 78px
+    &__subheader
+        text-align: center
+        color:#ffffff
+        font-size: 14px
+        font-weight: 500
+        letter-spacing: 0.5px
+        margin-bottom: 61px
+    &__desrc
+        color:#ffffff
+        font-size: 9px
+        font-weight: 500
+        letter-spacing: 1.64px
+        position: absolute
+        bottom: 18px
+        line-height: 18px
+        p
+            margin-bottom: 0
+            &:first-child
+                text-transform: uppercase
+    &__footer
+        height: 78px
+        padding: 33px 0 33px 0
+        a
+            text-align: center
+            color:#000000
+            display: block
+            text-decoration: none
+            letter-spacing: 2px
+            text-align: center
+            font-size: 11px
+            font-weight: 500
+            text-transform: uppercase
+            &:after
+                content: ''
+                margin-top: 4px
+                height: 1.5px
+                width: 0
+                display: block
+                margin: 0 auto
+                background-color:#000000
+                display: block
+                transition: 0.5s all
+            &:hover
+                text-decoration: none
+                color:#000000
+                &:after
+                    width: 140px
