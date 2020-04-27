@@ -2,4 +2,59 @@
     margin: 0 auto
     width: 100%
     height: 100%
-    
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__text
+        height: 151px
+        width: 330px
+        display: inline-block
+        h2
+            color: #000000
+            font-size: 36px
+            font-weight: 700
+            line-height: 48px
+            text-transform: uppercase
+            text-align: left
+        p
+            color: #000000
+            font-size: 12px
+            font-weight: 400
+            line-height: 21px
+            letter-spacing: 0.5px
+            text-align: left
+    &__img
+        display: inline-block
+        position: relative
+        height: 732px
+        width: 630px 
+    &__imgBefore
+        z-index: 1
+        box-shadow:  $boxShadow
+        margin-top: 147px  
+        width: 450px
+        height: 440px
+        &_secondChange
+            height: 379px
+            margin: 118px 180px 235px 0
+        &_thirdChange
+            width: 338px
+            height: 555px
+            margin: 89px 292px 88px 0
+    &__imgAfter
+        position: absolute
+        height: 305px
+        width: 450px
+        right: 0
+        z-index: -1
+        box-shadow: $boxShadow 
+        top: 50%
+        transform: translateY(-50%)
+        &_secondChange
+            height: 347px
+            top: 268px
+            bottom: 117px
+            transform: none
+        &_height
+            height: 355px
+            

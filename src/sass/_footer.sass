@@ -1,0 +1,41 @@
+.footer
+    min-height: 240px
+    +footerTextDecoration
+    padding: 87px 198px 133px 195px
+    &__wrapper
+        height: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__wrapper > div
+        width: 33%
+        &:nth-child(3)
+            display: flex 
+            justify-content: flex-end	
+    &__contacts
+        width: 100%
+        display: flex
+        justify-content: space-around
+        a
+            +footerTextDecoration
+        span
+            &:after
+                content: ''  
+                width: 0
+                height: 2px
+                background-color: #999999
+                display: block
+                margin: 0 auto
+                transition: 0.5s all
+            &:hover
+                &:after
+                    width: 100%
+                            
+    &__social
+        width: 109px
+        display: flex
+        justify-content: space-between
+    &__social-item 
+       
+                
+
