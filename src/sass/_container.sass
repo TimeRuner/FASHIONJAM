@@ -9,6 +9,7 @@
         height: 151px
         width: 330px
         display: inline-block
+        transition: 0.5s all
         h2
             color: #000000
             font-size: 36px
@@ -27,7 +28,9 @@
         display: inline-block
         position: relative
         height: 732px
-        width: 630px 
+        width: 630px
+        transition: 0.5s all
+        
     &__imgBefore
         z-index: 1
         box-shadow:  $boxShadow
@@ -57,4 +60,7 @@
             transform: none
         &_height
             height: 355px
-            
+.pasiveLeft
+    transform: translateX(calc(-100% - 195px));
+.pasiveRight
+    transform: translateX(calc(100% + 195px));

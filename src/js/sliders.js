@@ -5,7 +5,7 @@ const bgArr = [
     'img/first/lastSlide.png'
 ]
 let sliderIndex = 1;
-let timer;
+
 (function showAutoBg(){
 	sliderIndex += 1;
 	checkBgArrLength(sliderIndex);
@@ -32,7 +32,48 @@ function changeBg(indexImg){
 }
 
 
+$(document).ready(function() {
+    $('.dots__item').each(function(i){
+         $(this).on('click', function(e){
+            e.preventDefault();
+            if(i > 0 && i < 4){
+                remove();
+                activeBlack(i);
+            }else{
+                remove();
+                activeWhite(i);
+            }
+         }) 
+     });
+    function remove(){
+        $('.dots__item').each(function(i){
+            $('.dots__item').eq(i).removeClass('activeBlack');
+            $('.dots__item').eq(i).removeClass('activeWhite');
+        })
+    }
+    function activeBlack(index){
+        $('.dots__item').each(function(i){
+            $('.dots__item').eq(i).addClass('blackBg');
+        })
+        $('.dots__item').eq(index).addClass('activeBlack');
+    }
+    function activeWhite(index){
+        $('.dots__item').each(function(i){
+            $('.dots__item').eq(i).removeClass('blackBg');
+        })
+        $('.dots__item').eq(index).addClass('activeWhite');
+    }
+    $('a[href*=#]').bind('click', function(e) {
+            e.preventDefault();
+            let target = $(this).attr("href");
+            $('html, body').stop().animate({ scrollTop: $(target).offset().top}, 1000, function() {
+            location.hash = target;
+        }); 
+            return false;
+        });
 
+        
+});
 
 
 
@@ -43,16 +84,6 @@ function changeBg(indexImg){
 // const dots = document.querySelector('.sliderContainer_dotsContainer');
 // const dotsArea = document.querySelectorAll('.sliderContainer_element');
 // const firstSlide = document.querySelector('.firstSlide_main');
-// // const buttons = document.querySelector('.firstSlide_container');
-// // const bgArr = [
-// //     'img/first/firstSlide.png',
-// //     'img/first/lastSlide.png'
-// // ]
-// const lastSlideBgImg = [
-//     'img/bgPhoto/thirdSlide.png',
-//     'img/fifth/lastSlideBg.png',
-//     'img/fifth/lastBg.png'
-// ]
 // const sliderContainer = document.querySelector('.sliderContainer');
 // const header = document.querySelector('.header');
 // const sectionFive = document.querySelector('.sectionFive');
@@ -81,7 +112,7 @@ function changeBg(indexImg){
 //   }
 
 
-// // buttons.addEventListener('click', clikedSlideBtn);
+
 // dots.addEventListener('click', dotsSelect);          
 // function showSlides(n){
 //     correctSlideLength(n);
@@ -138,33 +169,9 @@ function changeBg(indexImg){
 //         }
 //     }
 // }
-// // function checkBgArrLength(index){
-// //     const lastElement = bgArr.length-1;
-// //     return imgBgIndex = index < 0 ? lastElement : index > lastElement ? 0 : index;
-// // }
-// function changeBg(indexImg){
-//     firstSlide.style.backgroundImage = 'url(' + bgArr[indexImg] + ')';
-//     switch(indexImg){
-//         case 0:
-//             firstSlide.style.backgroundPositionY = '-60px';
-//             break;
-//         case 1:
-//             firstSlide.style.backgroundPositionY = '-270px';  
-//             break;
-//         default:
-//             firstSlide.style.backgroundPositionY = '0';
-//             break;
-//     }
-// }
-// // function clikedSlideBtn({target}){
-// //     if(target.classList.contains('firstSlide_container_left')||target.classList.contains('leftImg')){
-// //         imgBgIndex--;
-// //     } else if (target.classList.contains('firstSlide_container_right')||target.classList.contains('rightImg')){
-// //         imgBgIndex++;
-// //     }
-// //     checkBgArrLength(imgBgIndex);
-// //     changeBg(imgBgIndex);
-// // }
+
+
+
 
 // function wheelingSlider(e){
 //     if(e.deltaY<0){

@@ -10,16 +10,18 @@
     <title>FUSHIONJAM</title>
 </head>
 <body>
-        <header class="header">
+        <div class="dots">
+            <a href="#first" class="dots__item activeWhite"></a>
+            <a href="#second" class="dots__item"></a>
+            <a href="#third" class="dots__item"></a>
+            <a href="#fourth" class="dots__item"></a>
+            <a href="#fifth" class="dots__item"></a>
+        </div>
+
+        <header class="header" id="first">
             <img src="img/first/header/headerImg.png" alt="Fashionjam" class="header__Img">
         </header>
-            <div class="dots">
-                <div class="dots__item activeWhite"></div>
-                <div class="dots__item"></div>
-                <div class="dots__item"></div>
-                <div class="dots__item"></div>
-                <div class="dots__item"></div>
-            </div>
+
             <section class="welcome">
                 <div class="welcome__main">
                     <h1 class="welcome__header">Welcome <br> to Fashionjam</h1>
@@ -38,7 +40,7 @@
                 <div class="welcome__footer"><a href="#">Why Fashionjam?</a></div>
             </section> 
 
-            <section class="sections">
+            <section class="sections" id="second">
                 <div class="container">
                     <div class="container__text">
                         <h2>Introduce yourself</h2>
@@ -51,7 +53,7 @@
                 </div>
             </section>
 
-            <section class="sections sections_bg">
+            <section class="sections sections_bg" id="third">
                 <div class="container">
                     <div class="container__img">
                         <img src="img/third/thirdBeginImg.png" alt="browser Page" class="container__imgBefore container__imgBefore_secondChange">
@@ -64,7 +66,7 @@
                 </div>
             </section>
 
-            <section class="sections">
+            <section class="sections" id="fourth">
                 <div class="container">
                     <div class="container__text">
                         <h2>Create and Apply Projects</h2>
@@ -77,7 +79,7 @@
                 </div>
             </section>
 
-            <section class="opportunities">
+            <section class="opportunities" id="fifth">
                 <div class="opportunities__header">Find new opportunities<br>
                     with Fashionjam</div>
                 <button class="button button_large">Get Started Now</button>
@@ -129,6 +131,9 @@
                     </div>
                 </div>
             </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="js/sliders.js"></script>
 </body>
 </html>

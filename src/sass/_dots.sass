@@ -5,8 +5,8 @@
     top: 320px
     right: 30px	
     z-index: 10
-    transition: all 2s ease;
     &__item
+        display: block
         width: 9px
         height: 9px
         border-radius: 100%
@@ -14,10 +14,21 @@
         background-color: #ffffff
         opacity: 0.3
         cursor: pointer
-        transition: all 0.5s ease;
+        transition: 1s all;
         &:hover
             background-color: #ffffff
             opacity: 1
+        
 .activeWhite
     background-color: #ffffff
+    opacity: 1
+
+.blackBg
+    background-color: #000000
+    opacity: 0.3
+    &:hover
+        background-color: #000000
+        opacity: 1
+.activeBlack
+    background-color: #000000
     opacity: 1
