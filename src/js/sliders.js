@@ -46,12 +46,7 @@ $(document).ready(function() {
             }
          }) 
      });
-    function remove(){
-        $('.dots__item').each(function(i){
-            $('.dots__item').eq(i).removeClass('activeBlack');
-            $('.dots__item').eq(i).removeClass('activeWhite');
-        })
-    }
+   
     function activeBlack(index){
         $('.dots__item').each(function(i){
             $('.dots__item').eq(i).addClass('blackBg');
@@ -86,7 +81,31 @@ $(document).ready(function() {
         });
     
     $(window).scroll(function(){
-        
+        if($(this).scrollTop()>=300){
+            $('.container__text').eq(0).removeClass('pasiveLeft');
+            $('.container__img').eq(0).removeClass('pasiveRight');
+        }
+        if($(this).scrollTop()<500){
+            remove();
+            $('.dots__item').eq(0).addClass('activeWhite');
+        }
+        else if($(this).scrollTop()>=500 && $(this).scrollTop()<1100){
+            remove();
+            $('.dots__item').eq(1).addClass('activeBlack');
+        }else if($(this).scrollTop()>=1100 && $(this).scrollTop()< 1800){
+            remove();
+            $('.dots__item').eq(2).addClass('activeBlack');
+            $('.container__text').eq(1).removeClass('pasiveRight');
+            $('.container__img').eq(1).removeClass('pasiveLeft');
+        } else if ($(this).scrollTop()>=1800 && $(this).scrollTop()< 2600){
+            remove();
+            $('.dots__item').eq(3).addClass('activeBlack');
+            $('.container__text').eq(2).removeClass('pasiveLeft');
+            $('.container__img').eq(2).removeClass('pasiveRight');
+        }else{
+            remove();
+            $('.dots__item').eq(4).addClass('activeWhite');
+        }
         if( $(this).scrollTop()>=500 && $(this).scrollTop()<=2600 ){
             $('.dots__item').each(function(i){
                 $('.dots__item').eq(i).addClass('blackBg');
@@ -98,7 +117,12 @@ $(document).ready(function() {
         }
 
     });
-   
+    function remove(){
+        $('.dots__item').each(function(i){
+            $('.dots__item').eq(i).removeClass('activeBlack');
+            $('.dots__item').eq(i).removeClass('activeWhite');
+        })
+    }
 });
 
 

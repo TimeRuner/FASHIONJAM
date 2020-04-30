@@ -8,6 +8,9 @@
     text-transform: uppercase
     transition: 0.5s all
     margin-bottom: 24px
+    cursor: pointer
+    &:focus, &:active
+        outline: none
     &:hover
         background-color: #000000
         color: #ffffff
@@ -17,4 +20,19 @@
     &_large
         width: 306px
         height: 48px
- 
+    &__modal
+        margin-top: 28px
+        margin-bottom: 0
+        width: 360px
+        height: 48px
+        line-height: 18px
+        display: flex
+        justify-content: center
+        align-items: center
+        border: none
+        transition: all .4s ease
+        background-color: #000
+        color: #fff
+        font-weight: 700
+        &:hover
+            background-color: rgba(0, 0, 0, .6)
