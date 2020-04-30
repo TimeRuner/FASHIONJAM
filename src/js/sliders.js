@@ -123,6 +123,18 @@ $(document).ready(function() {
             $('.dots__item').eq(i).removeClass('activeWhite');
         })
     }
+
+    $('[data-modal=preregister]').on('click', function(){
+        $('.overlay').fadeIn('slow');
+        $('#preregister').fadeIn('slow');
+    });
+    $('.subButton').on('click', function(){
+        $('.overlay').fadeIn('slow');
+        $('#register').fadeIn('slow');
+    });
+    $('.overlay').on('click', function(){
+        $('.overlay, #preregister, #register').fadeOut('slow');
+    });
 });
 
 
