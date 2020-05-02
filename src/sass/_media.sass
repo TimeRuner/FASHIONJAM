@@ -8,7 +8,7 @@
     .container
         justify-content: space-between
         &__img
-            max-width: 574px
+            max-width: 600px
         &__text
             max-width: 300px
             h2 
@@ -16,7 +16,7 @@
         &__imgBefore
             max-height: 400px
             max-width: 409px
-            margin-left: 51px
+            margin-left: 20px
             margin-top: 159px
             &_secondChange
                 height: 345px
@@ -26,12 +26,13 @@
                 max-width: 308px
 
         &__imgAfter
+            top: 359px
             max-height: 278px
             max-width: 409px
             &_secondChange
                 max-height: 316px
-                margin-right: 57px
-                margin-top: 29px
+                margin-right: 27px
+                margin-top: -62px
             &_height
                 max-height: 324px
                 top: 410px
@@ -39,4 +40,100 @@
         padding: 197px 0 175px 0;
     .footer
         padding: 87px 153px 0 135px;
+
+@media ( max-width: 991px )
+    .dots
+        right: 22px
+    .welcome
+        &__header
+            font-size: 50px
+            line-height: 65px
+
+    .sections
+        padding: 0 52px
+        height: 521px
+    .container
+        &__img
+            width: 562px
+        &__imgBefore
+            max-height: 388px
+            max-width: 397px
+            margin-left: 0
+            margin-top: 56px
+            &_secondChange
+                height: 335px
+                margin-left: 0
+                margin-top: 0
+            &_thirdChange
+                max-height: 430px
+                max-width: 262px
+                margin-left: 75px
+                margin-top: 30px
+        &__imgAfter
+            top: 256px
+            max-width: 397px
+            max-height: 270px
+            &_secondChange
+                max-height: 307px
+                margin-right: 5px
+                margin-top: -129px;
+            &_height
+                max-height: 275px
+                max-width: 347px
+                top: 248px
+        &__text
+            h2
+                font-size: 37px
+                line-height: 42px
+    .footer
+        padding: 87px 41px 0 41px;
+        &__wrapper > div
+            &:nth-child(3)
+                width: 234px
+            &:nth-child(1)
+                width: 250px
+
+@media ( max-width: 767px )
+    .container
+        &__img
+            width: 562px
+        &__imgBefore
+            max-height: 291px
+            max-width: 298px
+            margin-left: 0
+            margin-top: 56px
+            &_secondChange
+                height: 251px
+                margin-left: 0
+                margin-top: 0
+            &_thirdChange
+                max-height: 322px
+                max-width: 197px
+                margin-left: 75px
+                margin-top: 30px
+        &__imgAfter
+            top: 256px
+            max-width: 298px
+            max-height: 203px
+            &_secondChange
+                max-height: 230px
+                margin-right: 5px
+                margin-top: -129px;
+            &_height
+                max-height: 206px
+                max-width: 260px
+                top: 248px
+        &__text
+            h2
+                font-size: 37px
+                line-height: 42px
+    .footer
+        padding: 87px 41px 0 41px;
+        &__wrapper > div
+            &:nth-child(3)
+                width: 234px
+            &:nth-child(1)
+                width: 250px
+                
     
+
