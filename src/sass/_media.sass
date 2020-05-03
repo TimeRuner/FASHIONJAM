@@ -54,14 +54,14 @@
         height: 521px
     .container
         &__img
-            width: 562px
+            max-width: 562px
         &__imgBefore
             max-height: 388px
             max-width: 397px
             margin-left: 0
             margin-top: 56px
             &_secondChange
-                height: 335px
+                max-height: 335px
                 margin-left: 0
                 margin-top: 0
             &_thirdChange
@@ -93,47 +93,53 @@
             &:nth-child(1)
                 width: 250px
 
-@media ( max-width: 767px )
+@media ( max-width: 767px ) 
     .container
         &__img
-            width: 562px
+            max-width: 350px
         &__imgBefore
-            max-height: 291px
-            max-width: 298px
-            margin-left: 0
+            max-height: 270px
+            max-width: 250px
             margin-top: 56px
             &_secondChange
-                height: 251px
+                max-height: 215px
+                max-width: 230px
                 margin-left: 0
-                margin-top: 0
+                margin-top: 66px
+                margin-bottom: 0
             &_thirdChange
-                max-height: 322px
-                max-width: 197px
-                margin-left: 75px
+                max-height: 300px
+                max-width: 188px
+                margin-left: 10px
                 margin-top: 30px
         &__imgAfter
-            top: 256px
-            max-width: 298px
-            max-height: 203px
+            top: 193px
+            max-width: 240px
+            max-height: 190px
             &_secondChange
-                max-height: 230px
-                margin-right: 5px
-                margin-top: -129px;
+                max-height: 202px
+                margin-right: 24px
+                margin-top: -45px;
             &_height
-                max-height: 206px
-                max-width: 260px
-                top: 248px
+                max-height: 200px
+                max-width: 232px
+                top: 183px
         &__text
+            margin-bottom: 210px
             h2
                 font-size: 37px
-                line-height: 42px
+                line-height: 50px
+    .button
+        &_large
+            width: 250px
+                
     .footer
-        padding: 87px 41px 0 41px;
+        padding: 87px 10px 0 10px;
         &__wrapper > div
             &:nth-child(3)
-                width: 234px
-            &:nth-child(1)
-                width: 250px
+                width: 200px
+            &:nth-child(2)
+                width: 300px
                 
     
 
